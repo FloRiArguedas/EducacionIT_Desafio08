@@ -1,17 +1,8 @@
-# Pasos a seguir
+# Desafio 07
 
-1. Descomprimo
-2. Abrirlo en Visual Studio Code
-3. Abro la consola
-4. Recupero las depedencias (Los paquetes, las librerías)
+Floricela Arguedas Zúñiga
 
-```sh
-npm i # npm install
-```
+Link Github: https://github.com/FloRiArguedas/EducacionIT_Desafio07
 
-5. Levanto el servidor de desarrollo
 
-```sh
-npm run dev
-```  
 
