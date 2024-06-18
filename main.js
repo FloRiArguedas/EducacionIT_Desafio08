@@ -1,168 +1,216 @@
-import './css/style.css'
+import "./css/style.css";
 
-/*  DESAFIO 07 - FLORICELA ARGUEDAS */
+/*  DESAFIO 08 - FLORICELA ARGUEDAS */
 
-// ?Ejercicio 1  Declaración y Asignación: Declara una variable llamada nombre y asígnale tu nombre como valor.
+// ?Ejercicio 1  Intercambio de Valores: Declara dos variables (a, b) y utiliza una variable auxiliar (temp) para intercambiar sus valores.
 
-console.warn('EJERCICIO 1')
+console.warn("EJERCICIO 1");
 
-/* let nombre = 'Floricela'
+let valorA = 100;
+console.log("El Valor de A es: " + valorA);
+let ValorB = 88;
+console.log("El Valor de B es: " + ValorB);
 
-console.log(nombre) */
+//Intercambio de valores entre las variables
+let Temporal = valorA;
+valorA = ValorB;
+ValorB = Temporal;
 
-// ?Ejercicio 2. Tipos de Datos: Crea variables para almacenar un número entero (edad), un número decimal (precio), una cadena de texto (ciudad) y un valor booleano (esEstudiante).
+console.log("Ahora el Valor de A es: " + valorA);
+console.log("Ahora el Valor de B es: " + ValorB);
 
-console.warn('EJERCICIO 2')
+// ?Ejercicio 2.  Función que reciba 2 números como entrada y determine cuál es el mayor.
 
-let edad = 30
+console.warn("EJERCICIO 2");
 
-let precio = 1250.25
+let num1 = parseInt(prompt("Digite un primer número"));
+let num2 = parseInt(prompt("Digite un segundo número"));
 
-let ciudad = ' Heredia, Costa Rica'
+function numMayor(num1, num2) {
+  if (num1 > num2) {
+    console.log("El número " + num1 + " es mayor que " + num2);
+  } else if (num2 > num1) {
+    console.log("El número " + num2 + " es mayor que " + num1);
+  } else {
+    console.log("El número " + num2 + " y el número " + num1 + " son iguales");
+  }
+}
 
-let estudiante = true
+numMayor(num1, num2);
 
-// ?Ejercicio 3. Concatenación: Declara dos variables (nombre, apellido) y muestra un mensaje que diga "Hola, [nombre] [apellido]".
+// ?Ejercicio 3.  Función que reciba un número y retorne si es un número dado es par o impar.
 
-console.warn('EJERCICIO 3')
+console.warn("EJERCICIO 3");
 
-let nombre = 'Floricela'
+let buscarpar = parseInt(prompt("Digite un número"));
+let espar = false;
 
-let apellido = 'Arguedas'
+function BuscandoPares(num) {
+  if (num % 2 === 0) {
+    espar = true;
+  }
+  return espar;
+}
 
-console.log( 'Hola ' + nombre + ' ' + apellido)
-
-// ?Ejercicio 4. Operaciones Matemáticas: Declara dos variables numéricas (num1, num2) y realiza las operaciones básicas (suma, resta, multiplicación, división) con ellas.
-
-console.warn('EJERCICIO 4')
-
-let num1 = 20
-
-let num2 = 8
-
-let suma = num1+num2
-let resta = num1-num2
-let multiplicacion = num1*num2
-let division = num1/num2
-
-console.log ('La suma de ' + num1 + ' + ' + num2 + ' es igual a: ' + suma)
-console.log ('La resta de ' + num1 + ' - ' + num2 + ' es igual a: ' + resta)
-console.log ('La multiplicación de ' + num1 + ' x ' + num2 + ' es igual a: ' + multiplicacion)
-console.log ('La división de ' + num1 + ' / ' + num2 + ' es igual a: ' + division)
-
-// ?Ejercicio 5. Incremento y Decremento: Declara una variable (contador) y utiliza los operadores de incremento (++) y decremento (--) para modificar su valor.
-
-console.warn('EJERCICIO 5')
-
-let contador = 8  // Se establece en 8 el contador
-
-console.log ('El contador es: ' + contador)
-
-contador ++  // Se incrementa en 1
-
-console.log ('Contador Incrementado: ' + contador)
-
-contador--  // Se decrementa en 1
-
-console.log ('Contador Decrementado: ' + contador)
-
-// ?Ejercicio 6. Prompt y Alert: Pide al usuario que ingrese su nombre mediante prompt() y luego muestra un mensaje de bienvenida con alert().
-
-/* console.warn('EJERCICIO 6')
-
-let nombreusuario = prompt( 'Digite su nombre') // Se solicita el nombre
-
-alert( 'Hola ' + nombreusuario + ' Bienvenido (a)')  // Se brinda mensaje de bienvenida */
- 
-// ?Ejercicio 7. Cálculo de Área: Pide al usuario el radio de un círculo y calcula su área (π * radio^2).
-
-console.warn('EJERCICIO 7')
-
-/* const pi = 3.14
-
-let radio = prompt( 'Digite el radio del círculo')
-
-let area = pi*(radio*radio)  // Se ejecuta la fórmula y se guarda en la variable
-
-console.log ( 'El área del círculo es: ' + area) */
-
-
-// ?Ejercicio 8. Conversión de Unidades: Pide al usuario una temperatura en grados Celsius y conviértela a Fahrenheit.
-
-console.warn('EJERCICIO 8')
-
-/* let celsius = prompt ('Digite en grados Celsius la temperatura')
-
-let conversion = (celsius*1.8)+32
-
-console.log('La temperatura en grados Fahrenheit es: ' + conversion)
- */
-// ?Ejercicio 9. Cálculo de Promedio: Pide al usuario tres números y calcula su promedio.
-
-/* console.warn('EJERCICIO 9')
-
-let primernum = parseInt(prompt( 'Digite el primer número'))
-let segundonum = parseInt(prompt( 'Digite el segundo número'))
-let tercernum = parseInt(prompt('Digite el tercer número'))
-
-let sumanumeros = primernum+segundonum+tercernum
-
-let promedio = sumanumeros/3
-
-console.log (' El promedio de los números dados es: ' + promedio) */
-
-// ?Ejercicio 10. Operador Ternario: Utiliza el operador ternario para determinar si un número es positivo o negativo.
-
-console.warn('EJERCICIO 10')
-
-/* let numero = prompt (' Digite un número')
-
-let resultado = (numero >=0) ? 'Ese número es positivo' : 'Ese número es negativo'
-
-console.log(resultado) */
-
-// ?Ejercicio 11. Condicional if-else: Pide al usuario su edad y determina si es mayor o menor de edad.
-
- console.warn('EJERCICIO 11')
-/*
-let edadusuario = prompt ('Digite su edad')
-
-if (edadusuario >= 18) {
-    console.log ( 'Usted es mayor de edad')
+if (BuscandoPares(buscarpar) === true) {
+  console.log("El número " + buscarpar + " es un número par");
 } else {
-    console.log ( 'Usted es menor de edad')
+  console.log("El número " + buscarpar + " es un número impar");
 }
- */
-// ?Ejercicio 12. Condicional switch: Pide al usuario un número del 1 al 7 y muestra el día de la semana correspondiente.
 
-console.warn('EJERCICIO 12')
+// ?Ejercicio 4. Funcion que calcula el precio final de un producto después de aplicar un descuento basado en el precio original y el porcentaje de descuento.
 
-let numdia = parseInt (prompt ( 'Indique un número del 1 al 7'))
+console.warn("EJERCICIO 4");
 
-switch (numdia) {
-    case 1:
-        console.log ('Hoy es el día Lunes')
-        break;
-    case 2:
-        console.log ('Hoy es el día Martes')
-        break;
-    case 3:
-        console.log ('Hoy es el día Miércoles')
-        break;
-    case 4:
-        console.log ('Hoy es el día Jueves')
-        break;
-    case 5:
-        console.log ('Hoy es el día Viernes')
-        break;
-    case 6:
-        console.log ('Hoy es el día Sábado')
-        break;
-    case 7:
-        console.log ('Hoy es el día Domingo')
-        break;
+let precioOriginal = parseInt(prompt("Digite el precio original del producto"));
 
-    default:
-        console.log ('A digitado un número incorrecto')
-        break;
+let porcentajeDes = parseInt(prompt("Digite el valor del porcentaje de descuento a aplicar"));
+
+let precioFinal = precioOriginal - (precioOriginal * (porcentajeDes/100));
+
+console.log ('El precio final de este producto, ya con ' + porcentajeDes +'% '+ 'de descuento es de: ' + precioFinal + ' colones')
+
+// ?Ejercicio 5. Función para Calcular Área: Crea una función que reciba el radio de un círculo y devuelva su área.
+
+console.warn("EJERCICIO 5");
+
+function areaCirculo() {
+  const pi = 3.14;
+  let radio = prompt("Digite el radio del círculo");
+  let area = pi * (radio * radio);
+  return area;
 }
+
+let resultado = areaCirculo(); //Se llama a la función y se guarda su resultado.
+console.log("El área del círculo es: " + resultado);
+
+// ?Ejercicio 6. Función para Convertir Temperatura: Crea una función que convierta de Celsius a Fahrenheit.
+console.warn("EJERCICIO 6");
+
+function ConvertirTemperatura() {
+  let celsius = prompt("Digite en grados Celsius la temperatura");
+  let conversion = (celsius * 1.8) + 32;
+  return conversion;
+}
+
+let tempFahrenheit = ConvertirTemperatura();
+console.log("La temperatura en grados Fahrenheit es: " + tempFahrenheit);
+
+// ?Ejercicio 7. Bucle for: Utiliza un bucle for para imprimir los números del 1 al 10.
+
+console.warn("EJERCICIO 7");
+
+for ( let i= 1; i<11; i++){
+    console.log ('Número: ' + i)
+}
+
+// ?Ejercicio 8. Bucle while: Utiliza un bucle while para pedir al usuario números hasta que ingrese un número negativo.
+
+console.warn("EJERCICIO 8");
+
+let numeroNegativo = parseInt(prompt(" Digite un número negativo"));
+
+while (numeroNegativo >= 0) {
+  numeroNegativo = parseInt(prompt(" Debe digitar un número negativo"));
+}
+
+console.log ('Su número negativo es: ' + numeroNegativo)
+
+// ?Ejercicio 9.  Tabla de Multiplicar: Pide al usuario un número y muestra su tabla de multiplicar del 1 al 10.
+console.warn("EJERCICIO 9");
+
+let numeroMulti = parseInt(prompt(" Digite el número de la tabla de Multiplicar que desea conocer"));
+
+for ( let i= 1; i<11; i++){
+    let resultadoMultiplicacion = numeroMulti*i;
+    console.log ( numeroMulti + ' x ' + i + ' es igual a: ' + resultadoMultiplicacion)
+}
+
+// ?Ejercicio 10. Suma de Números Pares: Calcula la suma de los números pares del 1 al 100.
+console.warn("EJERCICIO 10");
+
+let sumatoriaPares = 0;
+let par;
+console.log("Sumando los pares..." + sumatoriaPares)
+for (let i = 1; i < 101; i++) {
+  if (i % 2 === 0) {
+    sumatoriaPares = sumatoriaPares + i;
+    console.log( "+ " + i + " = " + sumatoriaPares);
+  }
+}
+console.log(
+  "La suma total de los números pares del 1 al 100 es: " + sumatoriaPares
+);
+
+// ?Ejercicio 11.  Objeto Persona: Crea un objeto persona con propiedades como nombre, edad, ciudad y un método presentarse() que muestre un mensaje de presentación.
+
+console.warn("EJERCICIO 11");
+
+let persona = {
+  nombre: 'Floricela',
+  edad: 30,
+  ciudad: 'Heredia',
+  Presentarse: function presentacion() {
+  console.log("Hola mi nombre es " + persona.nombre + " tengo " + persona.edad + " años y vivo en " + persona.ciudad );
+}
+};
+//Llamo a la funcion
+persona.Presentarse();
+
+// ?Ejercicio 12. Array de Objetos: Crea un array de objetos persona y utiliza un bucle para mostrar la información de cada persona.
+
+console.warn("EJERCICIO 12");
+
+//Objetos Persona
+let persona1 ={
+    nombre: 'Floricela',
+    edad: 30,
+    pais: 'Costa Rica', 
+}
+let persona2 ={
+    nombre: 'Victor',
+    edad: 28,
+    pais: 'Perú', 
+}
+let persona3 ={
+    nombre: 'Eduardo',
+    edad: 30,
+    pais: 'Costa Rica', 
+}
+let persona4 ={
+    nombre: 'Sandra',
+    edad: 62,
+    pais: 'Estados Unidos', 
+}
+let persona5 ={
+    nombre: 'Isabel',
+    edad: 35,
+    pais: 'México', 
+}
+
+//Array de los objetos persona
+let arrayPersonas = [persona1, persona2, persona3, persona4, persona5]
+
+//Bucle para recorrer el array
+
+for (let i=0; i<arrayPersonas.length; i++){
+    console.log ('La Persona de la posicion: ' + i + ', es ' + arrayPersonas[i].nombre + ' con ' + arrayPersonas[i].edad  + ' años, desde ' + arrayPersonas[i].pais)
+}
+
+// ?Ejercicio 13. Función para Calcular Promedio: Crea una función que reciba un array de números y devuelva su promedio.
+
+console.warn("EJERCICIO 13");
+
+let arrayNumeros = [0,3,16,28,39,43,56,68,70,82,98,100]
+
+let arrayNumeros2 = [5,6,9,8]
+
+function CalcuPromedio (array){
+    let suma =0;
+    for (let i=0; i<array.length; i++){
+        suma = suma + array[i]
+    }
+    let promedio = suma / array.length
+    console.log ('El promedio de los números del array es: ' + promedio)
+}
+CalcuPromedio (arrayNumeros)
